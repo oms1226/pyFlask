@@ -24,7 +24,8 @@ def logout():
 
 @app.route('/eplList')
 def eplList():
-    return "eplList"
+    rows = dbMgr.getEplInfoAll()
+    return render_template('sub/sub_eplList.html', info=info, teams=rows)
 
 # get 방식, post 방식 모두 지원
 @app.route('/login', methods=['GET','POST'])#/login/ 이라 쓰면 해당 페이지에서 상대경로가 /login/부터 진행되는 문제가 발생한다.
@@ -56,10 +57,10 @@ def login():
         # 결과에 따른 분기 처리
         #return 'login POST uid: %s, upw:%s' % (uid, upw)      
 
-info['web_title'] = '관리사이트'
-info['home_url'] = '/'#url_for('home')
-
 if __name__ == '__main__':
+    with app.test_request_context():
+        info['web_title'] = '관리사이트'
+        info['home_url'] = url_for('home')
     app.run(debug=True)
 else:
     print('본 서버는 메인으로 구동시에만 작동된다.')

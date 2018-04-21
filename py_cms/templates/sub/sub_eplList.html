@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 포함될 파일이 없을 경우, plan B, C 형태로 대체 파일을 나열한다.  ignore missing 이 있으면 오류가 발생하더라도 user에게 안알리겠다.-->
+    {% include ["common/head.html","planB.html","planC.html"] ignore missing %}
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <!-- 상단 왼쪽 메뉴 -->
+            {% include "common/menu_left.html" %}
+
+            <!-- 상단 오른쪽 메뉴 -->
+            {% include "common/menu_right.html" %}            
+
+            <!-- 왼쪽 주 메뉴 -->
+            {% include "common/menu_side.html" %}            
+
+        </nav>
+        <!-- 실제 본문 내용 -->
+        <!-- 상대경로는 무조건 경로는 templates 부터 시작한다.-->
+        {% include "sub/sub_eplListDetail.html" %}
+
+    </div>
+    <!-- /#wrapper -->
+    {% include "common/foot.html" %}
+
+
+</body>
+
+</html>
