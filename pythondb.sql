@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `bbs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- 테이블 데이터 pythondb.bbs:~1 rows (대략적) 내보내기
+-- 테이블 데이터 pythondb.bbs:~3 rows (대략적) 내보내기
 /*!40000 ALTER TABLE `bbs` DISABLE KEYS */;
 INSERT INTO `bbs` (`id`, `title`, `content`, `fileData`, `regDate`) VALUES
 	(1, '1', '2', '3', '2018-04-20 16:42:39'),
@@ -73,6 +73,19 @@ INSERT INTO `tbl_epl` (`rank`, `name`, `total`, `winPoint`, `win`, `draw`, `lose
 	(20, '크리스탈 팰리스 FC', 12, 5, 1, 2, 9, 6, 24, -18);
 /*!40000 ALTER TABLE `tbl_epl` ENABLE KEYS */;
 
+-- 테이블 pythondb.user 구조 내보내기
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- 테이블 데이터 pythondb.user:~0 rows (대략적) 내보내기
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+
 -- 테이블 pythondb.users 구조 내보내기
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -84,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `uid` (`uid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- 테이블 데이터 pythondb.users:~0 rows (대략적) 내보내기
+-- 테이블 데이터 pythondb.users:~1 rows (대략적) 내보내기
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `uid`, `upw`, `name`, `regdate`) VALUES
 	(1, 'ncia', '1234', '양재역', '2018-04-19 15:19:57');
