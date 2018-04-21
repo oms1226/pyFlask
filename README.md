@@ -2,6 +2,8 @@
 ## python-3.6.5
 ## mariadb-10.2.14-winx64
 ## VSCodeSetup-x64-1.22.2
+## download\강사님작업자료.tar
+### 해당 파일은 강사님을 프로젝트 파일을 만들면서 작성한 파일들이며, 내가 작성한 파일을 project 로 올렸으며 실상 동일한 파일이다.
 ## github의 경우, repo 총 1GB 그리고 파일당 100MB의 제한이 있다. 하지만, 해당 repo는 크지 않아 위에 언급된 모든 파일을 올려두었다!
 
 # pyFlask repository 내 Project 설명
