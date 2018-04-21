@@ -35,8 +35,11 @@ def create_app( config_path='resource/config.cfg' ):
     # blueprint 생성 및 연결 작업 => 컨트롤러
     from service.app_blueprint import blueprintUser, blueprintTrade
     from service.controller import user
+    from service.controller import trade
     # 블루프린트 연결
     app.register_blueprint( blueprintUser, url_prefix = '/users')
+    app.register_blueprint( blueprintTrade, url_prefix = '/trade')
+    
     #=======================================================================
     # 플라스크 객체를 반환
     return app
