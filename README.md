@@ -1,4 +1,4 @@
-# pyFlask
+# pyFlask repository 내 Project 설명
 
 ## pythondb.sql
 ### https://support.appliedi.net/kb/a1034/how-to-import-and-export-a-mysql-database-using-heidisql.aspx
@@ -18,3 +18,8 @@
 
 ## py_blueprint
 ### blueprint 라는 것을 활용하여 MVC 형태로 그리고 DB는 ORM 형태로 관리하는 것으로 Django 형태를 만드는 거라 보면 될 것 같다.
+
+# infos
+## 2018.04.19~2018.04.21 NCIA Flask 교육
+## google docs
+### https://docs.google.com/spreadsheets/d/17iDYAjHgB4NILqjkh9XFoXF50_Bsgu1bdw5rBr9sgWA/edit#gid=0
