@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<title>업로드</title>
+</head>
+<body>
+<h2>업로드</h2>
+<div id="wrap">
+<fieldset>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" required/>
+        <br>
+        <input type="file" name="fileData" required/>
+        <br>
+        <textarea name="content"></textarea>
+        <br>
+        <input type="submit" value="등록"/>
+    </form>
+</fieldset>
+</div>
+</body>
+</html>
