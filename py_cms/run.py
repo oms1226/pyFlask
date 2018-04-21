@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, session, redirect
+from flask import Flask, render_template, url_for, request, session, redirect, jsonify
 from dbMgr import DBManager
 
 app = Flask(__name__)
@@ -56,6 +56,16 @@ def login():
             return render_template('errorjs.html', errMsg='로그인오류', path=None)
         # 결과에 따른 분기 처리
         #return 'login POST uid: %s, upw:%s' % (uid, upw)      
+
+@app.route('/search', methods=['post'])
+def search():
+    print('검색요청')
+    # 검색어 추출
+    keyword = request.form['keyword']
+    # 검색
+    rows = dbMgr.searchWithKeyword(keyword)
+    # json 응답
+    return jsonify( rows )
 
 if __name__ == '__main__':
     with app.test_request_context():

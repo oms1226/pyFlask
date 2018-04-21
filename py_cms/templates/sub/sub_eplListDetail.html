@@ -10,26 +10,42 @@
         <div class="row">
             <div class="col-lg-12">
                 <!-- 구현 -->
-                <table border="1" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <td>랭킹</td>
-                            <td>팀명</td>
-                            <td>총경기수</td>
-                            <td>승점</td>                                                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for team in teams %}
-                            <tr>
-                                <td>{{team['rank']}}</td>
-                                <td>{{team['name']}}</td>
-                                <td>{{team['total']}}</td>
-                                <td>{{team['winPoint']}}</td>
-                            </tr>
-                        {% endfor %}                
-                    </tbody>
-                </table>
+                <div id="wrap">
+                        <h2>EPL 검색</h2>
+                        <fieldset>
+                            <form>
+                                <input type="text" required name="keyword" />
+                                <input type="submit" value="검색" />
+                            </form>
+                            <div>
+                                <ul id="result">
+                                    <li><b>맨</b>유</li>
+                                    <li><b>맨</b>시티</li>                    
+                                </ul>
+                            </div>
+                        </fieldset>
+                        <h2>EPL 팀 리스트</h2>
+                        <table border="1" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <td>랭킹</td>
+                                    <td>팀명</td>
+                                    <td>총경기수</td>
+                                    <td>승점</td>                                                            
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for team in teams %}
+                                    <tr>
+                                        <td>{{team['rank']}}</td>
+                                        <td>{{team['name']}}</td>
+                                        <td>{{team['total']}}</td>
+                                        <td>{{team['winPoint']}}</td>
+                                    </tr>
+                                {% endfor %}                
+                            </tbody>
+                        </table>
+                    </div>
             </div>
         </div>
         <!-- /.row -->
