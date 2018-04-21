@@ -29,9 +29,10 @@ def create_app( config_path='resource/config.cfg' ):
     from service.app_database import DBManager
     # eval()은 원래 의도된 타입으로 적용되어 반환됨 'True' -> True
     DBManager.init(db_url, eval(app.config['DB_LOG_FLAG']) )
-
+    # 테이블이 업을 경우 생성
+    DBManager.init_table()
+    #=======================================================================
     # blueprint 생성 및 연결 작업 => 컨트롤러
-
     #=======================================================================
     # 플라스크 객체를 반환
     return app
