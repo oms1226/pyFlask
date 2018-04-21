@@ -27,7 +27,13 @@
 ## py_blueprint
 ### blueprint 라는 것을 활용하여 MVC 형태로 그리고 DB는 ORM 형태로 관리하는 것으로 Django 형태를 만드는 거라 보면 될 것 같다.
 
+## py_crawler
+### selenium 을 사용하여 인터파크 투어에서 파리 검색하기
+### selenium 을 사용하여 네이버 로그인 하기
+### 크롤링 후 wait 방법 2개와 자원 해제(브라우져, Process)
+
 # infos
+## 강사님 : 김봉섭 / kenshi@nate.com
 ## 2018.04.19~2018.04.21 NCIA Flask 교육
 ## google docs
 ### https://docs.google.com/spreadsheets/d/17iDYAjHgB4NILqjkh9XFoXF50_Bsgu1bdw5rBr9sgWA/edit#gid=0
