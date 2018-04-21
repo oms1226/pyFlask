@@ -3,6 +3,7 @@
 ## mariadb-10.2.14-winx64
 ## VSCodeSetup-x64-1.22.2
 ## github의 경우, repo 총 1GB 그리고 파일당 100MB의 제한이 있다. 하지만, 해당 repo는 크지 않아 위에 언급된 모든 파일을 올려두었다!
+
 # pyFlask repository 내 Project 설명
 
 ## pythondb.sql

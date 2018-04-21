@@ -43,3 +43,16 @@ def login(name, password):
         return '회원 서비스 로그인 성공'
     else:
         return '회원 서비스 로그인 실패'
+
+@blueprintUser.route('/delete/<name>/<password>')#http://127.0.0.1:81/users/delete/newtest/testpwd
+def delete(name, password):
+    print('회원 서비스 탈퇴')
+    #해당 이름을 가진 데이터를 획득
+    findUser = dao.query(User).filter_by(name=name, password=password).first()
+    print ( findUser )
+    if findUser:
+        dao.delete(findUser)
+        dao.commit()
+        return '회원 서비스 탈퇴 성공'
+    else:
+        return '회원 서비스 탈퇴 실패'
