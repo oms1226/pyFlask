@@ -11,3 +11,10 @@ driver = wd.Chrome(executable_path='./chromedriver.exe')
 
 # 페이지로드
 driver.get( target_url )
+
+# 검색창으로 이동한다. #검색창은 크롬에서 페이지 검사로 찾는다.
+# 검색창에서 파리로 입력한다.
+driver.find_element_by_id('SearchGNBText').send_keys('파리')
+
+# 검색 버튼 클릭 #검색 버튼이 없다면, form tag에 summit으로 가면 된다.
+driver.find_element_by_class_name('search-btn').click()
