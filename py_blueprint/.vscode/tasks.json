@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            //원하는 이름으로 변경
+            "label": "플라스크 구동",
+            "type": "shell",
+            //해당 실행 파일 fullpath를 설정
+            "command": "D:\\py_project\\venv\\Scripts\\python",
+            //아래 field를 추가함
+            "args": [
+                "${file}"
+            ],
+            //스크립트에서 ctrl + shift + B 를 눌러서 label을 선택했을 때 아래 내용이 추가 된다.
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
