@@ -32,3 +32,14 @@ def update(_name, newname):
     findUser.name = newname
     dao.commit()
     return '회원 서비스 수정'
+
+@blueprintUser.route('/login/<name>/<password>')#http://127.0.0.1:81/users/login/newtest/testpwd
+def login(name, password):
+    print('회원 서비스 로그인')
+    #해당 이름을 가진 데이터를 획득
+    findUser = dao.query(User).filter_by(name=name, password=password).first()
+    print ( findUser )
+    if findUser:
+        return '회원 서비스 로그인 성공'
+    else:
+        return '회원 서비스 로그인 실패'
