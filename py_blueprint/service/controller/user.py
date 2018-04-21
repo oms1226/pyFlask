@@ -14,3 +14,11 @@ from service.model.user import User
 def root():
     print('회원 서비스 메인')
     return '회원 서비스 메인'
+
+@blueprintUser.route('/join/<name>/<password>')
+def join(name, password):
+    print('회원 서비스 가입')
+    newUser = User( name, password )
+    dao.add( newUser )
+    dao.commit()
+    return '회원 서비스 가입'
